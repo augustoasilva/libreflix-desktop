@@ -12,9 +12,7 @@ To run just clone/dowload this repo and use the comands
 
 ## GNU/Linux ##
 
-You can just download the files [here](https://notabug.org/augustoasilva/libreflix-desktop/raw/master/release-builds/compressed/libreflix-linux-x64.zip) extract and execute the app with a double click or on your from command line execute:
-
-    $ ./libreflix
+Avaible through the _Flatpak_, _Snap_ and _AppImage_.
 
 ### Flatpak ###
 
