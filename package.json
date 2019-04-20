@@ -1,0 +1,27 @@
+{
+  "name": "libreflix-desktop",
+  "version": "0.1.0",
+  "description": "Libreflix é uma plataforma de streaming livre e colaborativa que reúne produções audiovisuais independentes, de livre exibição e que fazem pensar.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build-win32": "electron-packager . libreflix --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/libreflix-icon.ico --prune=true --out=release-builds/windows --version-string.CompanyName=\"Libreflix\"--version-string.FileDescription=\"Libreflix\" --version-string.ProductName=\"Libreflix Desktop App\"",
+    "build-linux-x64": "electron-packager . libreflix --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/libreflix-936x756.png --prune=true --out=release-builds/gnu-linux",
+    "pack-linux-x64": "electron-installer-debian --arch x64 --config resources/debian.json",
+    "pack-linux-amd64": "electron-installer-debian --arch amd64 --config resources/debian.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://notabug.org/augustoasilva/libreflix-desktop.git"
+  },
+  "keywords": [
+    "libreflix"
+  ],
+  "author": "Augusto Silva",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "electron": "^2.0.4",
+    "electron-packager": "^12.1.0"
+  }
+}

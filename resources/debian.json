@@ -1,0 +1,21 @@
+{
+    "src": "release-builds/gnu-linux/libreflix-linux-x64",
+    "dest": "release-builds/packed/gnu-linux",
+    "icon": "assets/icons/png/libreflix-936x756.png",
+    "categories": [
+      "AudioVideo"
+    ],
+    "lintianOverrides": [
+      "changelog-file-missing-in-native-package"
+    ],
+    "name": "libreflix",
+    "productName": "Libreflix",
+    "version": "0.1.0",
+    "productDescription": "Libreflix é uma plataforma de streaming aberta e colaborativa que reúne produções audiovisuais independentes, de livre exibição e que fazem pensar.",
+    "maintainer": "Augusto Silva<augusto.a.silva@hotmail.com>",
+    "homepage": "https://libreflix.org/",
+    "scripts": {
+      "postinst":  "resources/post-install.sh"
+    }
+  
+  }
