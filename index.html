@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset = "UTF-8">
-      <title>Libreflix</title>
-      <link rel="stylesheet" href="assets/css/base.css">
-      <link rel="stylesheet" href="assets/css/loading.css">
-   </head>
-   <body>
-      <div class="container">
-        <webview id="webview" src="https://libreflix.org/" autosize minwidth="800" minheight="600">
-        </webview>
-        <div class = "indicator"></div>
-      </div>
-      
-      <script type = "text/javascript">
-         // Event handlers for loading events.
-         // Use these to handle loading screens, transitions, etc
-         
 
-         onload = () => {
-            const webview = document.querySelector('webview')
-            const indicator = document.querySelector('.indicator')
-            const div = document.createElement('div');
+<head>
+   <meta charset="UTF-8">
+   <title>Libreflix</title>
+   <link rel="stylesheet" href="assets/css/base.css">
+   <link rel="stylesheet" href="assets/css/loading.css">
+</head>
 
-            const loadstart = () => {
-              //indicator.innerText = 'loading...'
-              div.className = "loading";
-              indicator.appendChild(div);
+<body>
+   <div class="container">
+      <webview id="webview" src="https://libreflix.org/" autosize minwidth="800" minheight="600">
+      </webview>
+      <div class="indicator"></div>
+   </div>
 
-            }
+   <script type="text/javascript">
+      // Event handlers for loading events.
+      // Use these to handle loading screens, transitions, etc
 
-            const loadstop = () => {
-              //indicator.innerText = ''
-              div.parentNode.removeChild(div);
-            }
 
-            const overflow = () => {
-              webview.insertCSS('::-webkit-scrollbar { display: none; }');
-            }
+      onload = () => {
+         const webview = document.querySelector('webview')
+         const indicator = document.querySelector('.indicator')
+         const innerDiv = document.createElement('div');
+         const outerDiv = document.createElement('div')
+         //const body = document.body;
 
-            webview.addEventListener('did-start-loading', loadstart)
-            webview.addEventListener('did-stop-loading', loadstop)
-            webview.addEventListener('did-stop-loading', overflow)
+         const loadstart = () => {
+            //indicator.innerText = 'loading...'
+            outerDiv.classList = "load";
+            innerDiv.className = "loading";
+            outerDiv.appendChild(innerDiv)
+            indicator.appendChild(outerDiv);
+            indicator.style.visibility = (indicator.style.visibility == "visible") ? "hidden" : "visible";
+
          }
-      </script>
 
-   </body>
+         const loadstop = () => {
+            //indicator.innerText = ''
+            //indicator.parentNode.removeChild(indicator);
+            indicator.style.visibility = (indicator.style.visibility == "visible") ? "hidden" : "visible";
+         }
+
+         const overflow = () => {
+            webview.insertCSS('::-webkit-scrollbar { display: none; }');
+         }
+
+         webview.addEventListener('did-start-loading', loadstart)
+         webview.addEventListener('did-stop-loading', loadstop)
+         webview.addEventListener('did-stop-loading', overflow)
+      }
+   </script>
+   <!-- You can also require other files to run in this process -->
+   <script src="./renderer.js"></script>
+</body>
+
 </html>
