@@ -12,7 +12,7 @@ To run just clone/dowload this repo and use the comands or download and unzip th
 
 ## GNU/Linux ##
 
-Avaible through the _Flatpak_, _Snap_ and _AppImage_,_.deb_ and _.rpm_.
+Avaible through the _Flatpak_, _Snap_, _AppImage_,_.deb_ and _.rpm_.
 
 
 ### Flatpak ###
