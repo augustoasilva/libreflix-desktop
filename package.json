@@ -28,7 +28,7 @@
   "author": "Augusto Silva <augusto.a.silva@hotmail.com> (https://github.com/augustoasilva)",
   "license": "AGPL-3.0",
   "devDependencies": {
-    "electron": "^6.0.7",
+    "electron": "^7.2.4",
     "electron-builder": "^21.2.0",
     "electron-packager": "^14.0.5",
     "eslint": "^6.3.0"
