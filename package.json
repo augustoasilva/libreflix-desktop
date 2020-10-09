@@ -1,6 +1,6 @@
 {
   "name": "libreflix-desktop",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Libreflix é uma plataforma de streaming livre e colaborativa que reúne produções audiovisuais independentes, de livre exibição e que fazem pensar.",
   "main": "main.js",
   "scripts": {
@@ -12,7 +12,12 @@
     "appId": "org.libreflix.desktop",
     "productName": "Libreflix Desktop",
     "linux": {
-      "target": ["AppImage", "snap", "deb", "rpm"],
+      "target": [
+        "AppImage",
+        "snap",
+        "deb",
+        "rpm"
+      ],
       "icon": "assets/icons/512x512.png",
       "synopsis": "Aplicativo desktop do Libreflix",
       "category": "Video"
@@ -28,9 +33,9 @@
   "author": "Augusto Silva <augusto.a.silva@hotmail.com> (https://github.com/augustoasilva)",
   "license": "AGPL-3.0",
   "devDependencies": {
-    "electron": "^7.2.4",
+    "electron": "^10.1.3",
     "electron-builder": "^21.2.0",
-    "electron-packager": "^14.0.5",
-    "eslint": "^6.3.0"
+    "electron-packager": "^15.1.0",
+    "eslint": "^6.8.0"
   }
 }
